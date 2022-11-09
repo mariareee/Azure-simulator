@@ -11,7 +11,7 @@ pipeline {
             steps{
                 powershell(script: 'docker images -a')
                 powershell(script: """
-                cd azure-voting-app-redis-master/azure-vote
+                cd /azure-vote
                 docker images -a
                 docker build -t jenkins-pipeline .
                 docker images -a
